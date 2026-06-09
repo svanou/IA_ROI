@@ -1,0 +1,5 @@
+# Source-only dependency tree (only used to extract assets/framer-motion-dom.js)
+node_modules/
+
+# Large source PDFs (kept locally, not versioned)
+*.pdf

@@ -1,0 +1,274 @@
+/* ==========================================================================
+   Galadrim Design System — Core Tokens
+   Colors, typography, spacing, shadows, radii.
+   Source: Figma "Gala Brand Content" — Test-Charte + Refonte-Site.
+   ========================================================================== */
+
+:root {
+  /* ---------- BRAND CORE (from Test-Charte) --------------------------- */
+  --gala-rouge:    #F00048; /* Brand red — primary accent / CTAs */
+  --gala-bleu:     #0081FF; /* Brand blue — links / pill tags */
+  --gala-violet:   #6C00FF; /* Brand violet */
+  --gala-black:    #000000;
+  --gala-white:    #FFFFFF;
+
+  /* signature gradient (bleu → violet) */
+  --gala-gradient: linear-gradient(90deg, #0081FF 0%, #6C00FF 100%);
+  /* alt rouge gradient used in ads */
+  --gala-gradient-rouge: linear-gradient(90deg, #FF2362 0%, #F00048 100%);
+
+  /* ---------- BRAND SCALE (Refonte-Site) ------------------------------ */
+  --brand-100: #D0E7FF;
+  --brand-200: #AAD1FF;
+  --brand-300: #77AFFF;
+  --brand-400: #427CFF;
+  --brand-500: #1849FF;
+  --brand-600: #002BFF;
+  --brand-700: #FF2362; /* note: brand "700/800" switch to rouge */
+  --brand-800: #F00248;
+  --brand-900: #021AA4;
+  --brand-950: #020E64;
+
+  /* ---------- SECONDARY (cyan/sky) ------------------------------------ */
+  --sec-50:  #EDFAFF;
+  --sec-100: #D6F3FF;
+  --sec-200: #B5ECFF;
+  --sec-300: #83E2FF;
+  --sec-400: #48D0FF;
+  --sec-500: #1EB2FF;
+  --sec-600: #0695FF;
+  --sec-700: #0081FF; /* = gala-bleu */
+  --sec-800: #0862C5;
+  --sec-900: #0D559B;
+  --sec-950: #0E335D;
+
+  /* ---------- GREY SCALE ---------------------------------------------- */
+  --grey-50:  #F9F9F9;
+  --grey-100: #EDEFF1;
+  --grey-200: #D7DCE0;
+  --grey-300: #B3BEC6;
+  --grey-400: #8A9BA6;
+  --grey-500: #A3A0A0;
+  --grey-600: #566773;
+  --grey-700: #47535D;
+  --grey-800: #42464C;
+  --grey-900: #0C1628;
+  --grey-950: #010C1E;
+
+  /* ---------- SEMANTIC ------------------------------------------------- */
+  --bg:        #FFFFFF;
+  --bg-soft:   #F9F9F9;
+  --bg-dark:   #010C1E;
+  --bg-hero:   #0C1628;
+
+  --fg-1:      #0C1628;  /* primary text */
+  --fg-2:      #47535D;  /* secondary text */
+  --fg-3:      #8A9BA6;  /* muted */
+  --fg-inv:    #FFFFFF;
+
+  --border:    #EDEFF1;
+  --border-strong: #D7DCE0;
+
+  --link:      #0081FF;
+  --cta:       #FF2362;
+  --cta-hover: #F00048;
+
+  /* ---------- TYPE ----------------------------------------------------- */
+  --font-display: "Kumbh Sans", "Inter", system-ui, -apple-system, sans-serif;
+  --font-body:    "Kumbh Sans", "Inter", system-ui, -apple-system, sans-serif;
+  --font-accent:  "Roobert", "Kumbh Sans", system-ui, sans-serif; /* labels / tokens — Roobert VF was used in Figma */
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* type scale — matches Refonte-Site Fonts/ */
+  --text-xs:   12px;   --lh-xs: 16px;
+  --text-sm:   14px;   --lh-sm: 20px;
+  --text-md:   16px;   --lh-md: 22px;
+  --text-lg:   18px;   --lh-lg: 28px;
+  --text-xl:   24px;   --lh-xl: 30px;
+
+  --title-sm:  30px;   --lh-title-sm: 38px;
+  --title-md:  36px;   --lh-title-md: 44px;
+  --title-lg:  48px;   --lh-title-lg: 56px;
+  --title-xl:  64px;   --lh-title-xl: 68px;
+  --title-2xl: 90px;   --lh-title-2xl: 92px;
+
+  /* ---------- SPACING -------------------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 120px;
+
+  /* ---------- RADII ---------------------------------------------------- */
+  --r-xs:   2px;
+  --r-sm:   4px;   /* Buttons */
+  --r-md:   8px;   /* Cards / inputs */
+  --r-lg:   16px;
+  --r-xl:   24px;  /* Hero cards, pills */
+  --r-pill: 9999px;
+
+  /* ---------- SHADOWS -------------------------------------------------- */
+  --shadow-card:    0 2px 35px 10px rgba(190,190,190,0.145);
+  --shadow-sm:      0 1px 2px rgba(12,22,40,0.06);
+  --shadow-md:      0 4px 12px rgba(12,22,40,0.08);
+  --shadow-lg:      0 20px 40px rgba(12,22,40,0.12);
+  --shadow-glow:    0 0 60px rgba(108,0,255,0.35);
+
+  /* ---------- MOTION --------------------------------------------------- */
+  --ease:        cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:    150ms;
+  --dur:         250ms;
+  --dur-slow:    400ms;
+}
+
+/* ==========================================================================
+   SEMANTIC TEXT STYLES
+   ========================================================================== */
+
+.gala-h1, .gala-title-xl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--title-xl);
+  line-height: var(--lh-title-xl);
+  letter-spacing: -0.02em;
+  color: var(--fg-1);
+}
+.gala-h2, .gala-title-lg {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--title-lg);
+  line-height: var(--lh-title-lg);
+  letter-spacing: -0.015em;
+  color: var(--fg-1);
+}
+.gala-h3, .gala-title-md {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--title-md);
+  line-height: var(--lh-title-md);
+  color: var(--fg-1);
+}
+.gala-h4, .gala-title-sm {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--title-sm);
+  line-height: var(--lh-title-sm);
+  color: var(--fg-1);
+}
+.gala-lead, .gala-text-xl {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  line-height: var(--lh-xl);
+  color: var(--fg-1);
+}
+.gala-body, .gala-text-md {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-md);
+  line-height: var(--lh-md);
+  color: var(--fg-1);
+}
+.gala-small, .gala-text-sm {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: var(--lh-sm);
+  color: var(--fg-2);
+}
+.gala-caption, .gala-text-xs {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-xs);
+  line-height: var(--lh-xs);
+  letter-spacing: 0.02em;
+  color: var(--fg-2);
+}
+.gala-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gala-bleu);
+}
+.gala-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+}
+
+/* Pill used extensively in hero — eyebrow in a soft-blue capsule */
+.gala-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  background: var(--brand-100);
+  color: var(--gala-bleu);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.gala-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border-radius: var(--r-sm);
+  padding: 8px 20px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-md);
+  line-height: 22px;
+  border: 0;
+  cursor: pointer;
+  transition:
+    transform var(--dur-fast) var(--ease),
+    background-color var(--dur) var(--ease),
+    opacity var(--dur) var(--ease);
+}
+.gala-btn:active { transform: translateY(1px); }
+
+.gala-btn--primary {
+  background: var(--cta);
+  color: var(--gala-white);
+}
+.gala-btn--primary:hover { background: var(--cta-hover); }
+
+.gala-btn--secondary {
+  background: var(--gala-bleu);
+  color: var(--gala-white);
+}
+.gala-btn--secondary:hover { background: var(--sec-800); }
+
+.gala-btn--ghost {
+  background: transparent;
+  color: var(--fg-1);
+  border: 1px solid var(--border-strong);
+}
+.gala-btn--ghost:hover { border-color: var(--fg-1); }
+
+.gala-btn--dark {
+  background: var(--grey-900);
+  color: var(--gala-white);
+}
+.gala-btn--dark:hover { background: var(--grey-800); }
+
+.gala-btn--sm { padding: 6px 14px; font-size: var(--text-sm); line-height: 20px; }
+.gala-btn--lg { padding: 12px 24px; font-size: var(--text-md); line-height: 24px; }
